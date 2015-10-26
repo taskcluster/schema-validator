@@ -2,10 +2,9 @@ suite("validator", function() {
   var assert  = require('assert');
   var path    = require('path');
   var aws     = require('aws-sdk-promise');
-  var base    = require('../');
+  var subject = require('../lib/validator');
   var config  = require('taskcluster-lib-config');
   var http    = require('http');
-
 
   test("test publish", function() {
     var cfg = config({
@@ -24,7 +23,7 @@ suite("validator", function() {
                       "taskcluster-base-test.conf.json");
     }
 
-    return base.validator({
+    return subject({
       publish:        true,
       schemaPrefix:   'base/test/',
       schemaBucket:   cfg.get('schemaTestBucket'),
