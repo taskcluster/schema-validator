@@ -1,5 +1,5 @@
 {
-  "name": "schema-validator",
+  "name": "schema-validator-publisher",
   "version": "0.8.7",
   "author": "Jonas Finnemann Jensen <jopsen@gmail.com>",
   "description": "schema-validator",
@@ -29,7 +29,8 @@
   "devDependencies": {
     "babel-compile": "0.0.4",
     "mocha": "2.0.1",
-    "taskcluster-lib-config": "^0.8.8"
+    "taskcluster-lib-config": "^0.8.8",
+    "taskcluster-lib-rules": "^1.0.5"
   },
-  "main": "./index.js"
+  "main": "./lib/validator"
 }
